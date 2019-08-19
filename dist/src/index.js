@@ -21,6 +21,7 @@ class TypeScriptPlugin {
         this.serverless = serverless;
         this.options = options;
         if (!this.isEnabled()) {
+            this.serverless.cli.log('Typescript plugin is disabled.');
             return;
         }
         this.hooks = {
